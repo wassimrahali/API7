@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.api7">
+
+    <!-- Permission for internet access -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- Optional: Add more permissions as needed -->
+    <!-- Example: Access fine location -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,15 +21,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.API7"
         tools:targetApi="31">
+
+        <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <!-- Optional: Add additional activities if your app has more screens -->
+        <!-- Example:
+        <activity
+            android:name=".AnotherActivity"
+            android:exported="false">
+        </activity>
+        -->
+
+    </application>
 </manifest>

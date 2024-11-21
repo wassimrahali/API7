@@ -2,13 +2,13 @@ package com.example.api7;
 
 public class Produit {
 
-    private String name;
+    private String nomProduit;
 
-    public Produit(String name) {
-        this.name = name;
+    public Produit(String nomProduit) {
+        this.nomProduit = nomProduit;
     }
-
     public String getNomProduit() {
-        return name;
+        return nomProduit;
     }
 }
+
